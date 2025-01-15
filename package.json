@@ -6,7 +6,8 @@
   "scripts": {
     "start:dev": "tsx watch src/server.ts",
     "start:prod": "node build/server.js",
-    "build": "tsup src --out-dir build"
+    "build": "tsup src --out-dir build",
+    "lint": "eslint src --config eslint.config.mjs --fix"
   },
   "keywords": [],
   "author": "Pedro Nieto <pedronieto.2005@gmail.com>",
