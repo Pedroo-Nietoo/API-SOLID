@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "GymPass style app",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start:dev": "tsx watch src/server.ts",
     "start:prod": "node build/server.js",
     "build": "tsup src --out-dir build",
-    "lint": "eslint src --config eslint.config.mjs --fix"
+    "lint": "eslint src --config eslint.config.mjs --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage"
   },
   "keywords": [],
   "author": "Pedro Nieto <pedronieto.2005@gmail.com>",
@@ -16,13 +20,16 @@
     "@eslint/js": "9.18.0",
     "@types/bcryptjs": "2.4.6",
     "@types/node": "22.10.5",
+    "@vitest/coverage-v8": "3.0.4",
     "eslint": "9.18.0",
     "globals": "15.14.0",
     "prisma": "6.2.1",
     "tsup": "8.3.5",
     "tsx": "4.19.2",
     "typescript": "5.7.3",
-    "typescript-eslint": "8.19.1"
+    "typescript-eslint": "8.19.1",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "3.0.4"
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
