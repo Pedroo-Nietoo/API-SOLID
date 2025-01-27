@@ -1,6 +1,6 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import tseslint from '@typescript-eslint/eslint-plugin';
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -12,6 +12,8 @@ export default [
       'semi': ['error', 'always'],
       'indent': ['error', 2],
       'linebreak-style': ['error', 'unix'],
+      'no-useless-constructor': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   pluginJs.configs.recommended,
